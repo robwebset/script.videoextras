@@ -62,27 +62,27 @@
     	<description lang="pt">Permite adicionar extras de vídeo à sua Biblioteca de Vídeos. Leia o wiki para mais instruções de configuração.</description>
     	<description lang="pt_BR">Prove um caminho para vídeo extras via info de vídeo. Ver o wiki para instruções de configuração.</description>
     	<description lang="sv">Tillhandahåller ett sätt att lägga till Video Extras till ditt filmbibliotek. Se wiki för inställningsanvisningar.</description>
-    	<disclaimer lang="cs">Tvůrci skinů: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="de">Skin-Ersteller, bitte schaut für Informationen über die Integration in euren Skin im Wiki:&#10;http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="el">Skinners, ελέγξτε τον ιστότοπο για πληροφορίες σχετικά με την ενσωμάτωση στο κέλυφός σας: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="en">Skinners, please see the wiki to know how to integrate it in your skin: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="en_NZ">Skinners, please see the wiki to know how to integrate it in your skin: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="en_US">Skinners, please see the wiki to know how to integrate it in your skin: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="es">Desarrolladores, por favor ver el Wiki para saber como integrarlo en tu Skin&#10;http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="fr">Développeurs de thème, merci de lire le Wiki afin d'obtenir les informations pour l'intégrer à votre thème : http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="fr_CA">Habilleurs, consultez le wiki pour savoir comment l'intégrer à votre habillage : http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="gl">Autores de temas, por favor vexan a wiki para saber como integralo no seu tema:&#10;http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="ko">스킨 제작자 여러분, 스킨에 통합하는 방법은 위키를 참조하기 바랍니다: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="lt">Teminių išvaizdų kūrėjai, instrukcijas kaip integruoti šį priedą į jūsų teminę išvaizdą rasite vikio puslapyje: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="nl">Skinners, bekijk de wikie om te weten hoe je heet moet integreren in jouw skin: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="pl">Twórcy skór powinni zapoznać się z informacjami na stronach Wiki, aby dowiedzieć więcej o integracji z dodatkiem: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="pt">Os autores dos temas deverão consultar o wiki para saberem como integrar este add-on no tema: http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="pt_BR">Skinners, por favor veja o wiki para saber como integrar em sua skin:&#10;http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
-    	<disclaimer lang="sv">Skaltillverkare, använd wikin för att se hur du kan integrera det i ditt skal:&#10;http://wiki.kodi.tv/index.php?title=Add-on:VideoExtras</disclaimer>
+    	<disclaimer lang="cs">Tvůrci skinů: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="de">Skin-Ersteller, bitte schaut für Informationen über die Integration in euren Skin im Wiki:&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="el">Skinners, ελέγξτε τον ιστότοπο για πληροφορίες σχετικά με την ενσωμάτωση στο κέλυφός σας: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="en">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="en_NZ">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="en_US">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="es">Desarrolladores, por favor ver el Wiki para saber como integrarlo en tu Skin&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="fr">Développeurs de thème, merci de lire le Wiki afin d'obtenir les informations pour l'intégrer à votre thème : https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="fr_CA">Habilleurs, consultez le wiki pour savoir comment l'intégrer à votre habillage : https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="gl">Autores de temas, por favor vexan a wiki para saber como integralo no seu tema:&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="ko">스킨 제작자 여러분, 스킨에 통합하는 방법은 위키를 참조하기 바랍니다: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="lt">Teminių išvaizdų kūrėjai, instrukcijas kaip integruoti šį priedą į jūsų teminę išvaizdą rasite vikio puslapyje: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="nl">Skinners, bekijk de wikie om te weten hoe je heet moet integreren in jouw skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="pl">Twórcy skór powinni zapoznać się z informacjami na stronach Wiki, aby dowiedzieć więcej o integracji z dodatkiem: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="pt">Os autores dos temas deverão consultar o wiki para saberem como integrar este add-on no tema: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="pt_BR">Skinners, por favor veja o wiki para saber como integrar em sua skin:&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
+    	<disclaimer lang="sv">Skaltillverkare, använd wikin för att se hur du kan integrera det i ditt skal:&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<language></language>
     	<platform>all</platform>
     	<license>See LICENSE.txt</license>
-    	<forum>http://forum.kodi.tv/showthread.php?tid=292722</forum>
+    	<forum></forum>
     	<source>https://github.com/robwebset/script.videoextras</source>
   </extension>
 </addon>
