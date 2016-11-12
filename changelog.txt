@@ -1,3 +1,6 @@
+v100.3.0 (2016-11-12)
+- Search for videos in sub-directories under Extras directory
+
 v2.2.3 (2016-09-05)
 - Fix Emby Movie Extras display
 
