@@ -285,6 +285,10 @@ class VideoExtrasFinder():
                     if dir_exists(videoTSDir) or dir_exists(videoBluRayDir):
                         extraItem = ExtrasItem(extrasDir, extrasSubDir, extrasDb=self.extrasDb, defaultFanArt=self.defaultFanArt)
                         extras.append(extraItem)
+                    else:
+                        # This is a sub directory inside the extras directory that is
+                        # not a DVD image directory, so scan the contents of this as well
+                        extras = extras + self._getExtrasDirFiles(extrasSubDir, exitOnFirst, True)
 
                     # Check if we are only looking for the first entry
                     if exitOnFirst is True:
