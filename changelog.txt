@@ -1,3 +1,6 @@
+v100.3.1 (2016-12-09)
+- Update for support of URepo
+
 v100.3.0 (2016-11-12)
 - Search for videos in sub-directories under Extras directory
 

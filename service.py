@@ -360,29 +360,38 @@ if __name__ == '__main__':
         if (addonItem['enabled'] is True) and (addonItem['broken'] is False) and (addonItem['type'] == 'xbmc.addon.repository') and (addonItem['addonid'] == 'repository.robwebset') and (addonItem['author'] == 'robwebset'):
             displayNotice = False
 
-            # Make sure that the service option is enabled
-            if Settings.isServiceEnabled():
-                try:
-                    # Construct the service class
-                    service = VideoExtrasService()
+    if displayNotice:
+        json_query = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Addons.GetAddonDetails", "params": { "addonid": "repository.urepo", "properties": ["enabled", "broken", "name", "author"]  }, "id": 1}')
+        json_response = simplejson.loads(json_query)
 
-                    # Refresh the caches
-                    service.cacheAllExtras()
-                    del service
-                except:
-                    log("VideoExtrasService: %s" % traceback.format_exc(), xbmc.LOGERROR)
-            else:
-                # Service not enabled
-                log("VideoExtrasService: Service disabled in settings")
-                # Clean any cached extras
-                CacheCleanup.removeAllCachedFiles()
-
-            # Track if videos finish, and auto display the video extras if required
-            if Settings.showExtrasAfterMovie():
-                playerMonitor = VideoExtrasPlayerMonitor()
-                while not xbmc.abortRequested:
-                    xbmc.sleep(1000)
-                del playerMonitor
+        if ("result" in json_response) and ('addon' in json_response['result']):
+            addonItem = json_response['result']['addon']
+            if (addonItem['enabled'] is True) and (addonItem['broken'] is False) and (addonItem['type'] == 'xbmc.addon.repository') and (addonItem['addonid'] == 'repository.urepo'):
+                displayNotice = False
 
     if displayNotice:
         xbmc.executebuiltin('Notification("robwebset Repository Required","github.com/robwebset/repository.robwebset",10000,%s)' % ADDON.getAddonInfo('icon'))
+    else:
+        # Make sure that the service option is enabled
+        if Settings.isServiceEnabled():
+            try:
+                # Construct the service class
+                service = VideoExtrasService()
+
+                # Refresh the caches
+                service.cacheAllExtras()
+                del service
+            except:
+                log("VideoExtrasService: %s" % traceback.format_exc(), xbmc.LOGERROR)
+        else:
+            # Service not enabled
+            log("VideoExtrasService: Service disabled in settings")
+            # Clean any cached extras
+            CacheCleanup.removeAllCachedFiles()
+
+        # Track if videos finish, and auto display the video extras if required
+        if Settings.showExtrasAfterMovie():
+            playerMonitor = VideoExtrasPlayerMonitor()
+            while not xbmc.abortRequested:
+                xbmc.sleep(1000)
+            del playerMonitor

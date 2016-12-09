@@ -6,7 +6,11 @@ For more details on how to use VideoExtras please refer to the wiki:
 
 [Add-on:VideoExtras](https://github.com/robwebset/script.videoextras/wiki)
 
-You can install this addon from: [Repository:robwebset](https://github.com/robwebset/repository.robwebset/blob/master/repos/repository.robwebset/repository.robwebset-1.0.0.zip) ([wiki](https://github.com/robwebset/repository.robwebset/wiki))
+You can install this addon from: [Repository:URepo](http://www.urepo.org/)
+
+For latest developer version: [Repository:robwebset](https://github.com/robwebset/repository.robwebset/blob/master/repos/repository.robwebset/repository.robwebset-1.0.0.zip) ([wiki](https://github.com/robwebset/repository.robwebset/wiki))
+
+To ask questions or comment about VideoExtras, please use the forum at [URepo.org](http://www.urepo.org/forum/viewtopic.php?t=1754)
 
 __Donations__
 
