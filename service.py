@@ -370,7 +370,7 @@ if __name__ == '__main__':
                 displayNotice = False
 
     if displayNotice:
-        xbmc.executebuiltin('Notification("robwebset Repository Required","github.com/robwebset/repository.robwebset",10000,%s)' % ADDON.getAddonInfo('icon'))
+        xbmc.executebuiltin('Notification("robwebset or URepo Repository Required","github.com/robwebset/repository.robwebset",10000,%s)' % ADDON.getAddonInfo('icon'))
     else:
         # Make sure that the service option is enabled
         if Settings.isServiceEnabled():
