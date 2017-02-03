@@ -22,18 +22,18 @@ RES_DIR = xbmc.translatePath(os.path.join(CWD, 'resources').encode("utf-8")).dec
 # all manually without the aid of an XML parser
 class EstuaryUpdate():
     def __init__(self):
-        # Find out where the confluence skin files are located
-        confAddon = xbmcaddon.Addon(id='skin.estuary')
-        self.confpath = xbmc.translatePath(confAddon.getAddonInfo('path'))
-        self.confpath = os_path_join(self.confpath, 'xml')
-        log("Estuary Location: %s" % self.confpath)
+        # Find out where the estuary skin files are located
+        estuaryAddon = xbmcaddon.Addon(id='skin.estuary')
+        self.estuarypath = xbmc.translatePath(estuaryAddon.getAddonInfo('path'))
+        self.estuarypath = os_path_join(self.estuarypath, 'xml')
+        log("Estuary Location: %s" % self.estuarypath)
         # Create the timestamp centrally, as we want all files changed for a single
         # run to have the same backup timestamp so it can be easily undone if the
         # user wishes to switch it back
         self.bak_timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
         self.errorToLog = False
 
-    # Method to update all of the required Confluence files
+    # Method to update all of the required Estuary files
     def updateSkin(self):
         # Update the files one at a time
         self._updateDialogVideoInfo()
@@ -62,7 +62,7 @@ class EstuaryUpdate():
     # Makes all the required changes to DialogVideoInfo.xml
     def _updateDialogVideoInfo(self):
         # Get the location of the information dialog XML file
-        dialogXml = os_path_join(self.confpath, 'DialogVideoInfo.xml')
+        dialogXml = os_path_join(self.estuarypath, 'DialogVideoInfo.xml')
         log("DialogVideoInfo: Estuary dialog XML file: %s" % dialogXml)
 
         # Make sure the file exists (It should always exist)
