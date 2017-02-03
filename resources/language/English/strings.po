@@ -180,7 +180,11 @@ msgctxt "#32038"
 msgid "Show Extras After Movie Completes (Restart Required)"
 msgstr ""
 
-#empty strings from id 32039 to 32100
+msgctxt "#32039"
+msgid "Update Estuary Skin"
+msgstr ""
+
+#empty strings from id 32040 to 32100
 
 msgctxt "#32101"
 msgid "Play All"
@@ -318,4 +322,16 @@ msgstr ""
 
 msgctxt "#32161"
 msgid "Please make sure the directory is writable by the user running Kodi."
+msgstr ""
+
+msgctxt "#32162"
+msgid "Estuary Skin Updated"
+msgstr ""
+
+msgctxt "#32163"
+msgid "This will update your Estuary Skin to include the VideoExtras features. Continue?"
+msgstr ""
+
+msgctxt "#32164"
+msgid "Unable to update the Estuary skin"
 msgstr ""
