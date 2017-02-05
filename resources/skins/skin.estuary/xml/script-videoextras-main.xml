@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3001">
+	<defaultcontrol always="true">51</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<!-- The following is a section from View_55_WideList.xml -->
+			<control type="group">
+				<include>OpenClose_Right</include>
+				<visible>Control.IsVisible(51)</visible>
+				<include>Visible_Right</include>
+				<control type="fixedlist" id="51">
+					<left>594</left>
+					<top>list_y_offset</top>
+					<bottom>list_y_offset</bottom>
+					<right>0</right>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>vertical</orientation>
+					<pagecontrol>531</pagecontrol>
+					<movement>5</movement>
+					<focusposition>6</focusposition>
+					<onleft>9000</onleft>
+					<onright>531</onright>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<focusedlayout height="list_item_height" width="widelist_width">
+						<control type="image">
+							<left>0</left>
+							<right>0</right>
+							<bottom>0</bottom>
+							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<visible>Control.HasFocus(51)</visible>
+						</control>
+						<control type="image">
+							<left>35</left>
+							<centertop>50%</centertop>
+							<width>32</width>
+							<height>32</height>
+							<visible>!Integer.IsGreater(ListItem.PlayCount,0)</visible>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+						</control>
+						<control type="image">
+							<left>35</left>
+							<centertop>50%</centertop>
+							<width>32</width>
+							<height>32</height>
+							<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
+							<texture>OverlayWatched.png</texture>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>100</right>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<!-- Label 2 is used to store the Duration HH:MM:SS -->
+						<control type="label">
+							<left>40</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$VAR[ListLabel2Var]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+					<itemlayout height="list_item_height" width="widelist_width" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(actors) | Container.Content(directors) | Container.Content(files) | Container.Content(mixed) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(unknown)">
+						<control type="image">
+							<left>35</left>
+							<centertop>50%</centertop>
+							<width>32</width>
+							<height>32</height>
+							<visible>!Integer.IsGreater(ListItem.PlayCount,0)</visible>
+							<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						</control>
+						<control type="image">
+							<left>35</left>
+							<centertop>50%</centertop>
+							<width>32</width>
+							<height>32</height>
+							<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
+							<texture colordiffuse="grey">OverlayWatched.png</texture>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>100</right>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<!-- Label 2 is used to store the Duration HH:MM:SS -->
+						<control type="label">
+							<left>40</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>40</right>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$VAR[ListLabel2Var]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+				</control>
+			</control>
+			<!-- End from View_55_WideList.xml -->
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Left</include>
+				<include>Visible_Left</include>
+				<include>ListThumbInfoPanel</include>
+			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$ADDON[script.videoextras 32001]" />
+				<param name="sublabel" value="$INFO[ListItem.Title]" />
+			</include>
+			<include>CommonScrollbars</include>
+			<include>MediaMenuMouseOverlay</include>
+		</control>
+	</controls>
+</window>

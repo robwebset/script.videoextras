@@ -28,6 +28,7 @@ class SourceDetails():
     title = None
     tvshowtitle = None
     fanart = None
+    icon = None
     filenameAndPath = None
     isTvSource = None
 
@@ -38,6 +39,7 @@ class SourceDetails():
     @staticmethod
     def forceLoadDetails():
         SourceDetails.getFanArt()
+        SourceDetails.getIcon()
         SourceDetails.getFilenameAndPath()
         SourceDetails.getTitle()
         SourceDetails.getTvShowTitle()
@@ -95,6 +97,15 @@ class SourceDetails():
             if SourceDetails.fanart is None:
                 SourceDetails.fanart = ""
         return SourceDetails.fanart
+
+    @staticmethod
+    def getIcon():
+        if SourceDetails.icon is None:
+            # Save the background
+            SourceDetails.icon = xbmc.getInfoLabel("ListItem.Icon")
+            if SourceDetails.icon is None:
+                SourceDetails.icon = ""
+        return SourceDetails.icon
 
     @staticmethod
     def isTv():
@@ -309,6 +320,7 @@ class VideoExtrasWindow(xbmcgui.WindowXML):
             anItem = xbmcgui.ListItem(ADDON.getLocalizedString(32101), path=SourceDetails.getFilenameAndPath())
             # Get the first items fanart for the play all option
             anItem.setProperty("Fanart_Image", self.files[0].getFanArt())
+            anItem.setIconImage(SourceDetails.getIcon())
 
             if SourceDetails.getTvShowTitle() != "":
                 anItem.setInfo('video', {'TvShowTitle': SourceDetails.getTvShowTitle()})
@@ -328,6 +340,7 @@ class VideoExtrasWindow(xbmcgui.WindowXML):
             if SourceDetails.getTitle() != "":
                 li.setInfo('video', {'Title': SourceDetails.getTitle()})
 
+            li.setIconImage(SourceDetails.getIcon())
             li.setProperty("Fanart_Image", SourceDetails.getFanArt())
             li.setProperty("search", "/search/?q=%s+Extras" % urllib.quote_plus(SourceDetails.getTitle().encode('utf8')))
             self.addItem(li)
@@ -342,6 +355,7 @@ class VideoExtrasWindow(xbmcgui.WindowXML):
             if SourceDetails.getTitle() != "":
                 li.setInfo('video', {'Title': SourceDetails.getTitle()})
 
+            li.setIconImage(SourceDetails.getIcon())
             li.setProperty("Fanart_Image", SourceDetails.getFanArt())
             li.setProperty("search", "/search/?q=%s+Extras" % urllib.quote_plus(SourceDetails.getTitle().encode('utf8')))
             self.addItem(li)
@@ -352,6 +366,9 @@ class VideoExtrasWindow(xbmcgui.WindowXML):
             # Create the list item
             anItem = anExtra.createListItem(path=SourceDetails.getFilenameAndPath(), parentTitle=SourceDetails.getTitle(), tvShowTitle=SourceDetails.getTvShowTitle())
 
+            # Set the default icon is nothing else is set
+            if anExtra.getIconImage() in [None, ""]:
+                anItem.setIconImage(SourceDetails.getIcon())
             self.addItem(anItem)
 
         # Before we return, set back the selected on screen item to the one just watched
