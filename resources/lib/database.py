@@ -63,14 +63,6 @@ class ExtrasDB():
             # We can also close the connection if we are done with it.
             # Just be sure any changes have been committed or they will be lost.
             conn.close()
-# No Need to check the version, as there is only one version
-#         else:
-#             # Check if this is an upgrade
-#             conn = sqlite3.connect(self.databasefile)
-#             c = conn.cursor()
-#             c.execute('SELECT * FROM version')
-#             log("Current version number in DB is: %s" % c.fetchone()[0])
-#             conn.close()
 
     # Get a connection to the current database
     def getConnection(self):

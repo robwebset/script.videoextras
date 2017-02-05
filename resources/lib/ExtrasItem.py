@@ -689,7 +689,16 @@ class ExtrasItem(BaseExtrasItem):
         # There are some cases where we want to remove the entries from the database
         # This is the case where the resume point is 0, watched is 0
         if (self.resumePoint == 0) and (self.watched == 0):
-            self.extrasDb.delete(self.getFilename())
+            # There are some media files that we can only get the duration from if they have been played
+            # so just make sure we can get the duration again before we blat this entry
+            origDuration = self.duration
+            if (self.totalDuration > 0) and (self.getDuration() < 1):
+                self.duration = origDuration
+                # We currently have a duration and can't calculate it, so just do the update
+                rowId = self.extrasDb.insertOrUpdate(self.getFilename(), self.resumePoint, self.totalDuration, self.getWatched())
+            else:
+                self.extrasDb.delete(self.getFilename())
+            self.duration = origDuration
         else:
             rowId = self.extrasDb.insertOrUpdate(self.getFilename(), self.resumePoint, self.totalDuration, self.getWatched())
         return rowId

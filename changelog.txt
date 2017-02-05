@@ -1,3 +1,7 @@
+v100.4.0
+- Add Extras List Estuary look and feel dialogs
+- Option to add Extras Button to Estuary Video Information Dialog
+
 v100.3.1 (2016-12-09)
 - Update for support of URepo
 
