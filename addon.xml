@@ -21,8 +21,6 @@
     	<summary lang="de">Video Extras zu den Filmen und TV-Sendungen in Ihrer Sammlung hinzufügen</summary>
     	<summary lang="el">Προσθήκη DVD Extras στις Ταινίες και τις Τηλεοπτικές σας Σειρές.</summary>
     	<summary lang="en">Add Video Extras to your Movies and TV shows.</summary>
-    	<summary lang="en_NZ">Add Video Extras to your Movies and TV shows.</summary>
-    	<summary lang="en_US">Add Video Extras to your Movies and TV shows.</summary>
     	<summary lang="es">Añadir extras de vídeo para sus películas y programas de televisión.</summary>
     	<summary lang="fr">Ajouter des bonus vidéo aux films et séries TV.</summary>
     	<summary lang="fr_CA">Ajouter des bonus vidéos à vos films et séries télé.</summary>
@@ -44,8 +42,6 @@
     	<description lang="de">Bietet eine Möglichkeit, um Videoextras zu Ihrer Videobibliothek hinzuzufügen. Schauen Sie ins Wiki für Installationsanweisungen.</description>
     	<description lang="el">Σας παρέχει έναν τρόπο να προσθέσετε DVD Extras στη Συλλογή σας. Ελέγξτε τον ιστότοπο του wiki για οδηγίες εγκατάστασης.</description>
     	<description lang="en">Provides a way to add Video Extras to your Video library. Look at the wiki for setup instructions.</description>
-    	<description lang="en_NZ">Provides a way to add Video Extras to your Video library. Look at the wiki for setup instructions.</description>
-    	<description lang="en_US">Provides a way to add Video Extras to your Video library. Look at the wiki for setup instructions.</description>
     	<description lang="es">Proporciona una manera de añadir extras de vídeos a su biblioteca. Mira el wiki para instrucciones de instalación.</description>
     	<description lang="fr">Fournit une solution pour ajouter des bonus vidéo à la vidéothèque. Consulter le Wiki pour les instructions de paramétrage.</description>
     	<description lang="fr_CA">Offre une façon d'ajouter des bonus vidéos à votre vidéothèque. Consulter le wiki pour des instructions de configuration.</description>
@@ -66,8 +62,6 @@
     	<disclaimer lang="de">Skin-Ersteller, bitte schaut für Informationen über die Integration in euren Skin im Wiki:&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<disclaimer lang="el">Skinners, ελέγξτε τον ιστότοπο για πληροφορίες σχετικά με την ενσωμάτωση στο κέλυφός σας: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<disclaimer lang="en">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
-    	<disclaimer lang="en_NZ">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
-    	<disclaimer lang="en_US">Skinners, please see the wiki to know how to integrate it in your skin: https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<disclaimer lang="es">Desarrolladores, por favor ver el Wiki para saber como integrarlo en tu Skin&#10;https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<disclaimer lang="fr">Développeurs de thème, merci de lire le Wiki afin d'obtenir les informations pour l'intégrer à votre thème : https://github.com/robwebset/script.videoextras/wiki</disclaimer>
     	<disclaimer lang="fr_CA">Habilleurs, consultez le wiki pour savoir comment l'intégrer à votre habillage : https://github.com/robwebset/script.videoextras/wiki</disclaimer>
