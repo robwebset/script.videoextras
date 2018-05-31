@@ -1,0 +1,466 @@
+[[https://github.com/robwebset/script.videoextras/raw/master/icon.png]]
+
+== Introduction ==
+You can install this addon from: [https://www.urepo.org URepo Repository]
+<br />
+<br />
+VideoExtras is an addon to allow you to store, list and play the "extras" for a given Movie or TV Series. (i.e. The extras that often come on DVD's or Blu-Rays)
+
+:''Note:'' This Addon will allow you to view the Extras Videos you already own - it will NOT download extras for you from the internet. (Although there is an option to use YouTube and Vimeo to search and view for extra video content)
+<br />
+
+== Quickstart Guide ==
+This Quickstart guide is aimed at first time users of VideoExtras, who also have some freedom to re-arrange their video content to fit best with VideoExtras.
+==== Arranging Your Video Files ====
+Although VideoExtras will support most structures (with various configuration changes), the easiest and best structure is as follows:
+
+:''../&lt;Movie Name>/&lt;movie name>.ext''
+:''../&lt;Movie Name>/Extras/&lt;extras name 1>.ext''
+:''../&lt;Movie Name>/Extras/&lt;extras name 2>.ext''
+:''...''
+:where .ext is any video extension compatible with Kodi
+More details of extras setup can be found in the File Naming Convention Section
+
+==== Stopping The Extras Being Scanned Into Your Library ====
+Now that you have copied your Extras files into the correct directories, you do not want them to be accidently picked up/scanned as a Movie or TV Series in their own right. To stop this you need to add "excludes" into the advancedsettings.xml file. This can be done for you by clicking on the "Update advancedsettings.xml File" operation on the first tab of the VideoExtras settings, or you could always do it yourself manually.
+==== Scanning Media Into Your Library ====
+Once you have updated the advancedsettings.xml file it should now be safe to perform any scans you wish to pull media into your library. At this point, the scanner should skip over any Extras files.
+==== Viewing Your Extras ====
+In order to view the Extras you have now stored with your Movies or TV Shows you will need one of the following 2 things:
+* To update the default Confluence Skin, this can either be done manually or by navigating to the Advanced tab of the VideoExtras settings and clicking on "Update Confluence Skin".
+* Use one of the non default skins that has built in support for VideoExtras
+==== You Are Now Up And Running ====
+That's it! You should now be able to navigate to your extras by either going to the Video Information Dialog for the given video, or by going via: 'Videos -> Addons -> VideoExtras''
+<br />
+There are plenty more things you can do to improve your user experience such as adding icons/fanart/thumbnails or giving detailed titles or plots. However, this is a quickstart guide, and you should take a look at the rest of the wiki for those features.
+<br />
+<br />
+== Using VideoExtras ==
+Now that you have configured VideoExtras, you can start using it. If you are using Confluence with the supplied Confluence update then any Movies or TV Shows that have extras will be highlighted with an overlay image.
+<br />
+== Video Extras Browser ==
+The VideoExtras browser allows you to view all the Movies/Tv Shows/Music Videos that have extras, and then watch those extras. You can load the extras browser in the following ways:
+# Via the VideoExtras Settings screen "Database" -> "Browse Extras"
+# From the Programs Menu -> VideoExtras
+# Videos -> Addons -> VideoExtras
+<br />
+== Online Video Platforms Support ==
+{| border="0"
+|- valign=top
+|
+It you have the '''YouTube''' or '''Vimeo''' addons installed and the options enabled in the settings you can be forwarded directly to the videos that would result in a search of "&lt;Movie Name> Extras", or by calling up the context menu there are options to search for other parameters.
+|}
+<br />
+== Settings ==
+This section details all the settings options for VideoExtras
+==== Extras ====
+{| border="0"
+|- valign=top
+|
+:'''Extras Directory Name'''
+::The name of the sub directory that stores all the extras files
+:'''Search Nested Directories'''
+::If directories below the selected TV Show or Movie should be searched for more extras. This is useful if you select a given TV Show and have all your seasons for that show in separate directories under that show. This means that all extras will be displayed when viewed via the root TV Show, and only the seasons extras if selected from inside a given season.
+:'''Enable Extras with File Tag'''
+::Finds extras based on a "tag", listing anything containing that tag
+:'''Extras File Name Tag'''
+::If "Enable Extras with File Tag" was enabled, this gives the name to search for as the tag
+:'''Use Detailed List Screen'''
+::Displays a more advanced listing screen which displays resume points and a watched flag
+:'''Window to show after exiting detailed list'''
+::(If detailed list screen is enabled) - Which screen to go to after exiting the detailed list screen, options are: "Video Selection", "Information", "Home"
+:'''Menu to show after playing an extra'''
+::(If detailed list screen is disabled) - Which screen to go to after playing an extra, options are: "Extras", "Video Selection", "Information", "Home"
+:<u>'''''Operations'''''</u>
+::
+:'''Update advancedsettings.xml File'''
+::Will update (or create if it does not already exist) the advancedsettings.xml file so that your extras files are not accidently read into the library and incorrectly detected as actual Movies or TV Shows
+|}
+
+==== File System ====
+{| border="0"
+|- valign=top
+|
+:'''Use Custom Extras Location'''
+::If extras are not stored with the Movies/TV Shows, this allows them to be stored in a different directory structure.
+:'''Path'''
+::The path that the extras are located in (Only if ''"Use Custom Extras Location"'' is enabled)
+:'''Custom Movies Sub-Folder'''
+::The name of the folder under the ''"Path"'' where Movie extras are stored (Note: a directory with the movie name will be located under this directory containing the extras for that movie)
+:'''Custom TV Shows Sub-Folder'''
+::The name of the folder under the ''"Path"'' where TV Shows extras are stored (Note: a directory with the TV Show name will be located under this directory containing the extras for that TV Show)
+:'''Custom Music Video Sub-Folder'''
+::The name of the folder under the ''"Path"'' where Music Video extras are stored (Note: a directory with the Music Video name will be located under this directory containing the extras for that Music Video)
+:<u>'''''Debugging'''''</u>
+::
+:'''Enable Debug logging'''
+::Enables VideoExtras debug logging into the Kodi log file
+|}
+
+==== Database ====
+{| border="0"
+|- valign=top
+|
+:'''Enable Database Support'''
+::Enables the use of the Extras stand-alone database, this enables the display and storing of data such as 
+:::* Which extras have been viewed already
+:::* Resume playing an extra from the last stop point
+:<u>'''''Operations'''''</u>
+::
+:'''Clean Database'''
+::Clears the extras database (resets all play states for the extras) - Note: This does not do anything to the default Kodi database.
+:'''Browse Extras'''
+::Loads the Video Extras Browser plugin.
+|}
+
+==== Advanced ====
+{| border="0"
+|- valign=top
+|
+:'''Enable YouTube Search Support'''
+::Enabling this option will allow you to search for extra content for your video on YouTube (Requires the YouTube add-on)
+:'''Enable Vimeo Search Support'''
+::Enabling this option will allow you to search for extra content for your video on Vimeo (Requires the Vimeo add-on)
+:'''Force Extras Button Display'''
+::Will always display the "Extras" button on the Video Information screen (Normal behaviour is to only show the button if there are extra's detected for the given video.
+:'''Exclude Files Regular Expression'''
+::Regular expression for files that will be deemed "Not to be extras" even if there are present in the Extras directory.
+:'''Allow caching of extras on startup'''
+::Used to cache the video extras available so that it can be used for icon overlays in some skins, if you do not wish to see icon overlays (or do not use a skin that supports them) then disable this option.
+:'''Use Custom Images'''
+::Allows you to change the images used in the skin to highlight if extras exist (Note: Changing these values will only be visable after a restart of Kodi)
+:'''- Overlay Image'''
+::(If Use Custom Images is enabled) The image that is drawn over the top of the thumbnail/cover
+:'''- List Image'''
+::(If Use Custom Images is enabled) The image that is used when adding to a list
+:<u>'''''Operations'''''</u>
+::
+:'''Update Confluence Skin'''
+::Will add VideoExtras support to the default confluence skin
+|}
+<br />
+<br />
+
+== File Naming Convention ==
+For your video extras files to be found they must follow a specific naming convention. VideoExtras currently supports extras videos from Movies, TV Shows and Music Videos. Here are the supported conventions:
+<br />
+=== Extras Folder ===
+<small>''(Recommended Method)''</small>
+<br />
+If you put all of your movies in their own folder you can simply add an "Extras" sub folder and add all of your bonus content in that directory. (The name of this folder can be changed via the settings menu). The script will simply display the filename (without extension) in the UI. By default the list of videos will appear in alphabetical order.
+<br />
+=== Same Directory (Tagging) ===
+
+If for some reason you don't want to create an "Extras" folder or you want to associate a bonus feature with a specific TV show episode there is an alternative naming convention which uses tagging. Simply use the same name as the file you want to associate the extra feature with and then append "-extras-" followed immediately (no spaces) by the name you want to displayed on the GUI for the extra, e.g. ''&lt;main video name>-extras-&lt;displayed name>.mkv'' . This default tag "-extras-" can be changed via the settings menu and MUST be turned on in order for the tagging to work.
+
+This method will work whether your movies are in their own self-contained folder or all together in one folder only.
+
+'''Example:''' So if you wanted to associate an Extended Pilot feature with the first episode of a tv show named "s1e1.mkv", you would create a file name "s1e1-extras-Extended Pilot.mkv". When the script displays this file in the UI it will strip out all the extra stuff and just show "Extended Pilot". To customize the displayed order here you can use NFO files or manual mode, just as in folder mode. Example of manual mode: "s1e1-extras-[#]Extended Pilot.mkv" where # is a number from 1 to 99.
+
+'''Warning:''' if you don't append the &lt;displayed name> after the tag -extras-, the file name will be displayed on the GUI instead, including the tag -extras-.
+<br />
+
+=== Remote Location ===
+
+If you did not want your extras stored in the same directory structure as your Movies, TV Shows or Music Videos, then there is a settings option "Use Custom Extras Location" that can be set to point to a different location. The format of this location should have 3 directories at the top level: "Movies", "TvShows" and "MusicVideos". Under each of these should be directories (That match the name of the directories containing the Movies, TV Shows and Music Videos) containing the extras files.
+<br />
+e.g.
+
+:Movies/Die Hard
+:TvShows/Blake's 7
+:TvShows/Blake's 7/Series 1
+:TvShows/Blake's 7/Series 2
+
+In this case, when clicking on the "TV Information" for the whole Blake's 7 Series you would see all files in "TvShows/Blake's 7" and the two sub-folders (if nested search is enabled), if viewing Episode Information for an episode in series 1 of Blake's 7 then you would only see the extras in "Blake's 7/Series 1"
+<br />
+<br />
+Note: When using a custom path VideoExtras will first check for a directory name that matches the directory containing the actual TV Show or Movie. (As described above) If that is not found, then it will use the text title of the Movie or TV Show as the directory name to look for with the following replacements:
+* : (Colon) removed from the name
+* / or \\ (Forward or back slash) replaced with -
+* . (dot) removed from the end of the name
+* Non ascii characters are removed
+<br />
+<br />
+With this method (based on where this root directory is), there may not be a need to add the "File Exclusions" section into advanced settings.
+<br />
+<br />
+
+== Kodi File Exclusions ==
+
+Since these are video files sprinkled in among all of your other video files we need to tell the kodi scanner to ignore these files. If we don't then the scanner will try and match them up with one of the online sites and you probably won't be happy with the results. To do this we just need to add some new regular expressions to the advanced settings. This can be done for you by clicking on the "Update advancedsettings.xml File" operation on the first tab of the VideoExtras settings, or you can do this manually using some of the information below. It is recommended to add these settings and reboot Kodi for them to take effect BEFORE any library scan takes place, so the scanner doesn't try to parse them.
+
+<source lang="xml">
+<advancedsettings>
+<video>
+  <excludefromscan action="append">
+    <regexp>-extras-</regexp>
+    <regexp>/Extras/</regexp>
+    <regexp>/extras/</regexp>
+    <regexp>[\\/]Extras[\\/]</regexp>
+    <regexp>[\\/]extras[\\/]</regexp>
+  </excludefromscan>
+  <excludetvshowsfromscan action="append">
+    <regexp>-extras-</regexp>
+    <regexp>/Extras/</regexp>
+    <regexp>/extras/</regexp>
+    <regexp>[\\/]Extras[\\/]</regexp>
+    <regexp>[\\/]extras[\\/]</regexp>    
+  </excludetvshowsfromscan>
+</video>
+</advancedsettings>
+</source>
+
+<small>''In this example the default name "Extras" has been used for the directory containing the extras, if you have changed this in the settings, then this name should also be changed to match.''</small>
+
+
+Obs.: 
+
+1) If you executed a library scan before the regexps have been put in place and found extra material accidentally scanned to your library, you can either remove/rename the extra material and conduct a 'clean library' under Kodi video settings or, delete the video sources and rescan them again after the regexps are operating properly. 
+
+2) Beware that if any of your sources contains the word 'extras' in it, e.g. a source named 'Extrasy' or 'Extrascent', nothing new that you put in it will be scanned to the library. This is because that source matches the exclude rule RegExp:'Extras'. To solve this either rename your source or change the default name 'extras', which VideoExtras operates with, to anything different.
+<br />
+<br />
+
+== Images: Thumbnails, Icons and Fanart ==
+=== Custom Artwork ===
+In order to have thumbnails or custom fanart images displayed on your Extras listings (and player overlay) you can either reference them via an NFO file (see NFO section), or by having the image in the same directory as the extras file. Images referenced via NFO (locally or remotely) will have priority over any other. Thumbnail/icon images in the same directory as extras will be picked up in the following order:
+
+* &lt;filename>.tbn/png/jpg
+* &lt;filename>-poster.tbn/png/jpg
+* &lt;filename>-thumb.tbn/png/jpg
+* poster.tbn/png/jpg (assigns same thumb to all those extras without one) 
+* folder.tbn/png/jpg (assings same thumb to all those extras without one)
+
+For fanart, the images are picked up in the following order :
+* &lt;filename>-fanart.tbn/png/jpg
+* fanart.tbn/png/jpg
+
+<small>obs: should you experience image caching persistency of old &lt;filename>-poster/thumb.ext after replacing them by new ones at folder level, this is due to the way Kodi handles the caching of certain images. If you need an immediate solution and don't want to wait for Kodi to cache the new images, there is a script available that solves this issue at database level called Texture Cache Maintenance utility by MilhouseVH. There aren't cases reported of image caching persistency when using the naming convention &lt;filename>.tbn/png/jpg</small>
+
+=== Default Artwork ===
+* '''If no custom fanart:''' fanart is automatically inherited from the parent video file, if there's any.
+* '''If no custom thumb (poster):''' default thumb is VideoExtras image icon and will only be displayed in the video overlay whilst playing the extra and not in the extras list. 
+<br />
+== NFO Files ==
+
+The recommended method to give a name or sort order to your "Extras" is to add an NFO for each extra file. This follows the standard Kodi method of having the same name as the file with the extension being replaced with ".nfo" (Sitting in the same directory as the original file). This nfo can take any of the followoing formats (These are in line with the default Kodi behaviour), additional data in these files will be ignored as it is not relevant for the extras file. (Note: The only mandatory element is the "title")
+
+=== Movie NFO Format ===
+<source lang="xml">
+ <?xml version='1.0' encoding='UTF-8'?>
+ <movie>
+     <title>Who knows</title>
+     <sorttitle>Who knows 1</sorttitle>
+     <plot>Something happens</plot>
+     <thumb>thumbnail.jpg</thumb>
+     <fanart>background.jpg</fanart>
+ </movie>
+</source>
+
+=== TV Show NFO Format ===
+<source lang="xml">
+ <?xml version='1.0' encoding='UTF-8'?>
+ <tvshow>
+     <title>Who knows</title>
+     <sorttitle>Who knows 1</sorttitle>
+     <plot>Something happens</plot>
+     <thumb>http://forum.kodi.tv/images/xbmc/xbmc-lettering.png</thumb>
+     <fanart>http://forum.kodi.tv/images/xbmc/xbmc-lettering.png</fanart>
+ </tvshow>
+</source>
+
+=== TV Episode NFO Format ===
+<source lang="xml">
+ <?xml version='1.0' encoding='UTF-8'?>
+ <episodedetails>
+     <title>Who knows</title>
+     <season>2</season>
+     <episode>1</episode>
+     <plot>Something happens</plot>
+     <thumb>C:\MyThumbs\Who.Knows.tbn</thumb>
+     <fanart>C:\MyFanart\myart.png</fanart>
+ </episodedetails>
+</source>
+
+=== Legacy Naming Format ===
+The following are the legacy naming formats, they are supported in the short term only to allow easy migration from DVDExtras to VideoExtras. (If an NFO file is specified, the settings in that file will be used)
+<br />
+<br />
+By default the list of videos will appear in alphabetical order. If you would like to specify a custom order just start the filename with brackets containing the text to sort on. For example you could create files "[0]Deleted Scenes.mkv", "[1]Bloopers.mkv", and "[2]Behind The Scenes.mkv". In this case instead of sorting on the name it will sort on the numbers. The bracket portion of the filename will not be displayed in the UI.
+<br />
+<br />
+For extras tagged on a per file basis (rather and all in a sub-directory) the name will be taken from anything after the extras tag. So append "-extras-Display name here" will result in the name "Display name here". To customize the order here you can use the same format as the extras folder. Example: "s01e01-extras-[99]Extended Pilot.mkv"
+<br />
+<br />
+== "videoextras.nfo" Files ==
+
+If you do not have your video extras files stored in a standard location (as already described in the previous sections) then it is possible to create a file with the name "videoextras.nfo" in the same directory as your Movie or TV Show. This file must be of the following format:
+
+<source lang="xml">
+ <?xml version='1.0' encoding='UTF-8'?>
+ <videoextras>
+     <file>..\..\Extras\Extras01.mkv</file>
+     <directory>C:\Kodi\Sample-Data\Movies\Extras</directory>
+ </videoextras>
+</source>
+
+You can have multiple "file" or "directory" entries in the "videoextras.nfo" file (or none of one type). The "file" will result in just the given file being listed in the extras. The "directory" will result in the entire contents of the directory being listed.
+: ''Note: It is only logical to use this approach if you have each movie in it's own directory, as adding a videoextras.nfo file to a directory containing multiple movies will result in every movie in that directory picking up the extras defined in the videoextras.nfo file''
+=== Common extras content for Movie Sets ===
+The videoextras.nfo's capabilities are useful to assign common extras content to movies within a set (collection), thus we would have only one physical copy of the 'Extras' folder somewhere whilst each videoextras.nfo is pointing at it.
+<br />
+<br />
+== Skin Information ==
+=== Skins With Build In Support ===
+The following skins (except Confluence, since it requires the hooks) have built-in support for Video Extras , so require no user skin modifications: 
+{| class="wikitable"
+|-
+! Skin !! Hook Support !! Detailed Screen Support !! Detailed Screen Skin Location !! Hooks Location
+|-
+| Confluence || <center>No</center>|| <center>Yes</center> || <center>VideoExtras</center> || <center>DialogVideoInfo.xml</center>
+|-
+| [http://forum.kodi.tv/showthread.php?tid=145080 Confluence Modified] || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center>
+|-
+| [http://forum.kodi.tv/showthread.php?tid=139712 Immersive] || <center>Yes</center> || <center>Yes</center> || <center>Immersive</center> || <center>DialogVideoInfo.xml</center>
+|-
+| [http://forum.kodi.tv/showthread.php?tid=165481 Xperience1080++] || <center>Yes</center> || <center>Yes</center> || <center>Xperience1080++</center> || <center></center>
+|-
+| Aeon MQ 5 || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center> || <center></center>
+|-
+| Aeon Nox 5 || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center> || <center>custom_1119_ExtrasDialog.xml</center>
+|-
+| [http://forum.kodi.tv/showthread.php?tid=185290 Aeon Nox 4.1.9.x] || <center>Yes</center> || <center>Yes</center> || <center>Aeon Nox 4.1.9.x</center> || <center></center>
+|-
+| Rapier || <center>Yes</center> || <center>Yes</center> || <center>Rapier</center> || <center></center>
+|-
+| [http://forum.kodi.tv/showthread.php?tid=170954 Artic mk. ii] || <center>Yes</center> || <center>Yes</center> || <center>Artic</center> || <center></center>
+|-
+| Metropolis ([http://forum.kodi.tv/showthread.php?tid=99317&pid=1726112#pid1726112 coming soon!]) || <center></center> || <center></center> || <center></center> || <center></center>
+|-
+| xTV-SAF || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center> || <center></center>
+|-
+| Transparency! || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center> || <center>custom_DialogExtras.xml</center>
+|-
+| Titan MediaBrowser || <center>Yes</center> || <center>Yes</center> || <center>VideoExtras</center> || <center></center>
+|-
+| Black Glass Nova 3.x || <center>Yes</center> || <center>Yes</center> || <center>Black Glass Nova</center> || <center>DialogVideoInfo.xml</center>
+|-
+|}
+<br />
+If your skin does not support the "Detailed List Screen", then you can either:
+# Switch the "Detailed List Screen" off - reverting to the basic list dialog
+# Convert the Window XML file in the addon and post a link to it in the forum.
+# Use the default "Detailed List Screen" (May not fit in visually with the skin you are using)
+
+<small>Obs: due to a natural delay between the dates of release of possible latest features (and fixed issues too) and actual implementation of these updates in the supported skins, such as support for Music Videos, these skins may still require some manual changes as per item 10.2 in certain skins with built-in support.</small>
+<br />
+<br />
+
+=== Confluence Skin Support ===
+There is an option that will update the Confluence skin for you in the settings. Just navigate to the "Update Confluence Skin" operation in the VideoExtras settings.
+<br />
+<br />
+
+;Note:
+For this update to work, the directory containing the Confluence skin must have write permissions set. To get around this:
+* ''' on Windows Vista, 7 and 8.x:''' right click Kodi and select "Run As administrator" and (if it prompts), click "Yes". Then navigate to the "Update Confluence Skin" operation in the VideoExtras settings. (If you select this option without doing a "run as administrator", it will say that it has updated the file successfully, but actually it won't.) - This is believed to only be an issue if you have "User Access Control" enabled<br />
+
+As Confluence is the default skin, its directory is not user-modifiable on non-Windows systems. To get around this, it is recommended to copy the Confluence skin's directory from it's existing location to the standard location for user installed add-ons:<br />
+* '''On Ubuntu Linux:''' the operation would be to copy the directory "/usr/share/kodi/addons/skin.confluence/" to "/home/&lt;username>/.kodi/addons/".<br />
+Upon restarting Kodi, you should now be able to use the "Update Confluence Skin" feature.<br />
+<br />
+
+=== Skin Modifications ===
+A skin modification is required in order to see the extras button in the UI and enjoy all the features. This is a fairly simple process but will depend on your selected skin. The file that needs modified is DialogVideoInfo.xml. The following code is needed for the default confluence skin, which would result in the new, [https://dl.dropboxusercontent.com/u/56161346/XBMC/VideoExtras/DialogVideoInfo%20062015/DialogVideoInfo.xml modified DialogVideoInfo.xml] (as per June 2015) with support for VideoExtras:
+
+Add to the top of the file (after &lt;window>):
+<source lang="xml">
+<onload condition="System.HasAddon(script.videoextras)">
+    RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+</source>
+
+Add to near the foot of the file after the last control statement:
+
+<source lang="xml">
+<control type="button" id="105">
+    <description>Extras</description>
+    <include>ButtonInfoDialogsCommonValues</include>
+    <label>Extras</label>
+    <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+    <visible>System.HasAddon(script.videoextras)
+     + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows)
+     | Container.Content(musicvideos)]
+     + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
+</control>
+</source>
+You should be able to use something similar for other skins.
+
+==== Location of XML ====
+The DialogVideoInfo.xml's location listed by skin:
+;Confluence
+* '''Ubuntu Linux:''' /home/&lt;username>/.kodi/addons/skin.confluence/720p/
+* '''Ubuntu Linux (alternative):''': /usr/share/kodi/addons/skin.confluence/720p/
+* '''OS X:''' /Applications/Kodi.app/Contents/Resources/Kodi/addons/skin.confluence/720p
+* '''Windows 7/8.1:''' Program Files (x86)\Kodi\addons\skin.confluence\720p
+;Aeon Nox 4
+* '''Ubuntu Linux:''' /home/&lt;username>/.kodi/addons/skin.aeon.nox/1080i/
+* '''Windows 7/8.1:''' Program Files (x86)\Kodi\addons\skin.aeon.nox\1080i\
+
+<small>Obs.: Remember to create a backup of any file before altering it i.e. DialogVideoInfo.xml.old.</small>
+
+=== Icon Overlay on Video List Screen (Advanced Skinners Only) ===
+If you are a skinner and wish to add support for some form of indication that a Movie/TV Show has extras, there is a way, it is not perfect but should get the overlays working. The first part is that you need to have "Allow caching of extras on startup" enabled in the VideoExtras settings. You then need the following in your skin:
+
+<source lang="xml">
+<control type="image">
+    <posx>950</posx>
+    <posy>14</posy>
+    <width>16</width>
+    <height>16</height>
+    <texture fallback="blank.png">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+    <visible>System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
+</control>
+</source>
+
+This example would possibly be added to the confluence skin at line 554 to add an icon to movies on the "biglist" screen. There are 3 different values that can be used:
+
+{| class="wikitable"
+|-
+| movies || Container.Content(Movies)
+|-
+| tvshows|| Container.Content(TVShows)
+|-
+| musicvideos|| Container.Content(MusicVideos)
+|}
+
+Where the first column supplies the value used in the &lt;texture> element, and the second for the &lt;visible> element.
+<br />
+<br />
+There is a default image that is used to represent the existance of Video Extras, but this can be overridden by the skin by putting a file called "videoextras_overlay.png" in the skins "media" directory, or by updating the VideoExtras settings.
+<br />
+<br />
+IMPORTANT: This is for advanced skinners only, please only post on the forum if you '''own the skin you are trying to update''' - this is because it will require lots of changes to patch an existing skin, and this feature is only intended to support skins that will support VideoExtras "Out Of The Box".
+<br />
+<br />
+
+=== Request To Skinners (Detailed List Screen) ===
+VideoExtras uses a custom window to show the extras, I have written the Window XML files for Confluence. With the large array of different skins available it is not possible to write versions for every skin. If you would be willing to support Video Extras I would really like to include a skin specific Window XML file for your skin and would be greatful for any contribution.
+<br />
+The files are very small, so hopefully will not take long to convert for your skin. 
+<br />
+<br />
+
+== Known Issues ==
+=== Cast List In Summary Screen Not Populated ===
+There is a known issue that when you return from the detailed list screen that shows the extras back to the summary screen, the Cast section is not populated, the following was posted for this, but there is no solution:
+http://forum.kodi.tv/showthread.php?tid=173502
+<br />
+=== Back Navigation For YouTube Incorrect ===
+The Videos -> Addon -> VideoExtras Youtube route seems to work how you would expect, however the Video Information -> Extras route gives the option, but when you exit the YouTube list of files it will return to the "Home" screen and not back to the Extras screen.
+<br />
+<br />
+
+== Debugging ==
+If reporting a problem, please also provide a debug log. To do this you need to enable BOTH:
+* Kodi logging from the main setting menu
+* VideoExtras debug from the VideoExtras addon settings menu
