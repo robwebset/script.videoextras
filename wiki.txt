@@ -1,9 +1,6 @@
 [[https://github.com/robwebset/script.videoextras/raw/master/icon.png]]
 
 == Introduction ==
-You can install this addon from: [https://www.urepo.org URepo Repository]
-<br />
-<br />
 VideoExtras is an addon to allow you to store, list and play the "extras" for a given Movie or TV Series. (i.e. The extras that often come on DVD's or Blu-Rays)
 
 :''Note:'' This Addon will allow you to view the Extras Videos you already own - it will NOT download extras for you from the internet. (Although there is an option to use YouTube and Vimeo to search and view for extra video content)
